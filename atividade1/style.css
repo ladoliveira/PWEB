@@ -1,0 +1,15 @@
+#div1 {
+    width: 50%;
+    height: auto;
+    border: 1px solid black;
+    margin: auto;
+    padding: 10px;
+   
+}
+
+#video{
+    width: 560px;
+    height: 315px;
+    margin-left: 10%;
+    padding: 20px 0 20px 0;
+}
