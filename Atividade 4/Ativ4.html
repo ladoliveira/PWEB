@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        do{
+            var num = prompt("Escolha uma opção: \n1 = pedra\n2 = papel\n3 = tesoura\n4 = Sair do jogo.");
+            var num2 = Math.random()*100;
+            num2 <= 33 ? num2 =1 : ((num2 > 33 && num2 <= 66) ? num2 = 2 : num2 = 3);
+            // if(num2 <= 33){
+            //     num2 = 1;
+            // }else if( num2 > 33 && num2 <= 66){
+            //     num2 = 2;
+            // } else {
+            //     num2 = 3;
+            // }
+            var usuario = (num == 1) ? "pedra" : ((num == 2)? "papel":"tesoura");
+            var comput = (num2 == 1) ? "pedra" : ((num2 == 2)? "papel":"tesoura");
+            if(num == 1 && num2 == 1 || num == 2 && num2 == 2 || num == 3 && num2 == 3 ){
+                alert(`Usuário: ${usuario}\nComputador: ${comput}\nEmpate!`);
+            }else if(num == 1 && num2 == 3){
+                alert(`Usuário: ${usuario}\nComputador: ${comput}\nPedra quebra tesoura. \nUsuário foi o vencedor!!!`);
+            }else if(num == 3 && num2 == 1){
+                alert(`Usuário: ${usuario}\nComputador: ${comput}\nPedra quebra tesoura. \nComputador foi o vencedor!!!`);
+            }else if(num == 3 && num2 == 2){
+                alert(`Usuário: ${usuario}\nComputador: ${comput}\nTesoura corta papel. \nUsuário foi o vencedor!!!`);
+            }else if(num == 2 && num2 == 3){
+                alert(`Usuário: ${usuario}\nComputador: ${comput}\nTesoura corta papel. \nComputador foi o vencedor!!!`);
+            }else if(num == 2 && num2 == 1){
+                alert(`Usuário: ${usuario}\nComputador: ${comput}\nPapel cobre tesoura. \nUsuário foi o vencedor!!!`);
+            }else if(num == 1 && num2 == 2){
+                alert(`Usuário: ${usuario}\nComputador: ${comput}\nPapel cobre tesoura. \nComputador foi o vencedor!!!`);
+            }
+        } while(num<4);
+        
+    </script>
+</body>
+</html>

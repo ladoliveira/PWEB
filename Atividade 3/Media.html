@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Média</title>
+</head>
+<body>
+    <script>
+        var nome = prompt("Digite o nome do aluno.");
+        var n1 = prompt("Digite a primeira nota.");
+        var n2 = prompt("Digite a segunda nota.");
+        var n3 = prompt("Digite a terceira nota.");
+
+        alert("A média das notas do aluno é:  " + media(n1,n2,n3));
+
+        function media(n1,n2,n3){
+            return (parseFloat(n1) + parseFloat(n2) + parseFloat(n3))/3; 
+        }
+    </script>
+    
+</body>
+</html>
