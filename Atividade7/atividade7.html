@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Construtora</title>
+</head>
+<body>
+    <script>
+        function retangulo(x,y){
+            this.base = x;
+            this.altura= y;
+
+            this.calcArea = function(){
+                return this.base * this.altura;
+            }
+        }
+
+        var ret1 = new retangulo(2,3);
+        alert(ret1.calcArea());
+
+        function Conta(){
+            var nomeCorrentista;
+            var banco;
+            var numConta;
+            var saldo;
+
+            this.getNomeCor = function (){
+                return nomeCorrentista;
+            }
+            this.getBanco = function (){
+                return banco;
+            }
+            this.getNumConta = function (){
+                return numConta;
+            }
+            this.getSaldo = function (){
+                return saldo;
+            }
+
+            this.setNome = function(nome){
+                nomeCorrentista = nome;
+            }
+
+            this.setBanco = function(novoBanco){
+                banco = novoBanco;
+            }
+
+            this.setNumConta = function(conta){
+                numConta = conta;
+            }
+
+            this.setSaldo = function(saldoN){
+                saldo = saldoN;
+            }
+        }
+
+        function Corrente(){
+            var SaldoEspc;
+
+            this.setSaldoEspc = function(saldo){
+                SaldoEspc = saldo;
+            }
+
+            this.getSaldoEspc = function(){
+                return SaldoEspc;
+            }
+        }
+
+        function Poupanca(){
+            var juros;
+            var dataVenc;
+
+            this.setJuros = function(jur){
+                juros = jur;
+            }
+
+            this.getJuros = function(){
+                return juros;
+            }
+            this.setDataVenc = function(data){
+                dataVenc = data;
+            }
+
+            this.getDataVenc = function(){
+                return dataVenc;
+            }
+        }
+
+
+        Corrente.prototype = new Conta();
+        Poupanca.prototype = new Conta();
+
+
+
+        
+
+        nCorrente = new Corrente();
+        nCorrente.setNome("Elis Regina");
+        nCorrente.setBanco("Bradesco");
+        nCorrente.setNumConta("12345");
+        nCorrente.setSaldo(1250.50);
+        nCorrente.setSaldoEspc('5000,00');
+
+        console.log(nCorrente.getSaldoEspc());
+
+        nPoupanca = new Poupanca();
+        nPoupanca.setNome('Luis Fucks');
+        nPoupanca.setBanco("Itau");
+        nPoupanca.setNumConta("252530");
+        nPoupanca.setSaldo(60000);
+        nPoupanca.setJuros(0.05);
+        nPoupanca.setDataVenc("25/05/2021");
+
+     alert(`Informações da conta corrente. \n Correntista: ${nCorrente.getNomeCor()}\n Banco: ${nCorrente.getBanco()}\n Nº conta: ${nCorrente.getNumConta()}\n Saldo: ${nCorrente.getSaldo()}\n Saldo especial: ${nCorrente.getSaldoEspc()} `);
+
+     alert(`Informações da conta poupança. \n Correntista: ${nPoupanca.getNomeCor()}\n Banco: ${nPoupanca.getBanco()}\n Nº conta: ${nPoupanca.getNumConta()}\n Saldo: ${nPoupanca.getSaldo()}\n Juros: ${nPoupanca.getJuros()} \n Data vencimento: ${nPoupanca.getDataVenc()}`);
+    </script>
+</body>
+</html>
