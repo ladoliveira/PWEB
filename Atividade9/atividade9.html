@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 9</title>
+</head>
+
+<div>
+    <input type="text" id="texto1" value="oioioio">
+    <br>
+    <input type="checkbox" id="cb1" onclick="validar()">Tranforma o texto em maiúscula
+    <br>
+    <input type="checkbox" id="cb2" onclick="validar1()" >Tranforma o texto em minúscula
+</div>
+<Script>
+    function validar(){
+        document.getElementById("cb2").checked = false;
+        var texto = document.getElementById("texto1").value.toUpperCase();
+        document.getElementById("texto1").value = texto;
+    }
+
+    function validar1(){
+        document.getElementById("cb1").checked = false;
+        var texto = document.getElementById("texto1").value.toLowerCase();
+        document.getElementById("texto1").value = texto;
+    }
+  
+    
+ </Script>
+
+<body>
+    
+</body>
+</html>
