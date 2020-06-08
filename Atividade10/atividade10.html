@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="meucss.css">
+</head>
+<body>
+    <h1>Formulário Principal</h1>
+    <hr>
+    <form name="form1" method="POST" onsubmit= " validar(this);">
+        <label  class="classe1" > Nome:
+            <input type="text" >
+        </label>
+        <label  class="classe1" > Email:
+            <input type="e-mail" >
+        </label>
+        <label for="area1" class="classe1">Comentários</label>
+        <textarea class="classe1" name="area1" id="Aria1" cols="30" rows="15"></textarea>
+        <div class="questao">
+            <h2>Pesquisa: </h2>
+            <p>Primeira vez nesta página?</p>
+            <input type="radio" name="radio" id="radio1">
+            <label for="radio1">Sim</label>
+            <input type="radio" name="radio" id="radio2">
+            <label for="radio2">Não</label>
+            <div class="botao">
+                <button type="submit" >Enviar</button>
+                <button type="button" onclick="limpatudo()">Limpar</button>
+            </div>
+        </div>  
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
