@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11</title>
+</head>
+<body>
+    <select name="cxSelecao" id="selecao" onchange="teste()">
+        <option value="" disabled selected>Selecione um curso</option>
+        <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+        <option value="pmte">Processos Metalúrgicos</option>
+        <option value="manu">Manufatura Avançada</option>
+    </select>
+    <script>
+        function teste (){
+            var teste = document.getElementById("selecao");
+            if(teste.children[1].selected == true){
+               if(confirm("Deseja mesmo ir para a pagina do curso de "+teste.children[1].textContent+ "?")){
+                    novaJanela = window.open("ads.html", "janela1", "width = 600, height = 300");
+                    return false;
+               }
+            }else if(teste.children[2].selected == true){        
+                        if(confirm("Deseja mesmo ir para a pagina do curso de "+teste.children[2].textContent+ "?")){
+                            novaJanela = window.open("pmte.html", "janela1", "width = 600, height = 300");
+                            return false;
+                        }       
+                } else
+                    if(confirm("Deseja mesmo ir para a pagina do curso de "+teste.children[3].textContent+ "?")){
+                    novaJanela = window.open("manufatura.html", "janela1", "width = 600, height = 300");
+                    return false;
+                    }           
+        }
+        
+    </script>
+</body>
+</html>
